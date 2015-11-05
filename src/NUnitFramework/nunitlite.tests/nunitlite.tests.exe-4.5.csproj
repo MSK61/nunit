@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6872DB53-3250-4A70-2A4C-567A55A6C4B3}</ProjectGuid>
+    <ProjectGuid>{8472DB53-5950-4A70-864C-567A55A6C4A1}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NUnitLite.Tests</RootNamespace>
@@ -13,22 +13,22 @@
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation />
-    <IntermediateOutputPath>obj\$(Configuration)\portable\</IntermediateOutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\net-4.5\</IntermediateOutputPath>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\bin\Release\portable\</OutputPath>
-    <DefineConstants>TRACE;NUNIT_FRAMEWORK;PORTABLE;NUNITLITE</DefineConstants>
+    <OutputPath>..\..\..\bin\Release\net-4.5\</OutputPath>
+    <DefineConstants>TRACE;NUNIT_FRAMEWORK;NET_4_5;PARALLEL;NUNITLITE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
     <NoWarn>0414</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <DefineConstants>TRACE;DEBUG;NUNIT_FRAMEWORK;PORTABLE;NUNITLITE</DefineConstants>
-    <OutputPath>..\..\..\bin\Debug\portable\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NUNIT_FRAMEWORK;NET_4_5;PARALLEL;NUNITLITE</DefineConstants>
+    <OutputPath>..\..\..\bin\Debug\net-4.5\</OutputPath>
     <DebugType>full</DebugType>
     <WarningLevel>4</WarningLevel>
     <Optimize>false</Optimize>
@@ -56,15 +56,6 @@
   <ItemGroup>
     <Compile Include="..\..\CommonAssemblyInfo.cs">
       <Link>CommonAssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\nunit\ColorConsole.cs">
-      <Link>ColorConsole.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\nunit\ColorConsoleWriter.cs">
-      <Link>ColorConsoleWriter.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\nunit\ExtendedTextWrapper.cs">
-      <Link>ExtendedTextWrapper.cs</Link>
     </Compile>
     <Compile Include="..\..\Common\tests\DefaultOptionsProviderTests.cs">
       <Link>DefaultOptionsProviderTests.cs</Link>
@@ -112,21 +103,21 @@
     <EmbeddedResource Include="TestListFile2.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\framework\nunit.framework-portable.csproj">
+    <ProjectReference Include="..\framework\nunit.framework-4.5.csproj">
       <Project>{D209C368-1277-4EA6-A887-AA6EBA51AB99}</Project>
-      <Name>nunit.framework-portable</Name>
+      <Name>nunit.framework-4.5</Name>
     </ProjectReference>
-    <ProjectReference Include="..\mock-assembly\mock-nunit-assembly-portable.csproj">
+    <ProjectReference Include="..\mock-assembly\mock-nunit-assembly.exe-4.5.csproj">
       <Project>{C3264FF3-E2D7-48D7-93A7-CDC9A827AD9D}</Project>
-      <Name>mock-nunit-assembly-portable</Name>
+      <Name>mock-nunit-assembly.exe-4.5</Name>
     </ProjectReference>
-    <ProjectReference Include="..\nunitlite.runner\nunitlite.runner-portable.csproj">
+    <ProjectReference Include="..\nunitlite.runner\nunitlite-4.5.csproj">
       <Project>{46ec0bc1-8f51-4b4d-b967-2ee452ea68fc}</Project>
-      <Name>nunitlite.runner-portable</Name>
+      <Name>nunitlite-4.5</Name>
     </ProjectReference>
-    <ProjectReference Include="..\testdata\nunit.testdata-portable.csproj">
+    <ProjectReference Include="..\testdata\nunit.testdata-4.5.csproj">
       <Project>{E7541163-D7BB-4E9A-A722-D7737B7A2995}</Project>
-      <Name>nunit.testdata-portable</Name>
+      <Name>nunit.testdata-4.5</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
